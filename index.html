@@ -9,10 +9,29 @@
 </head>
 <body>
   <div class="container">
-    <div>rock</div>
-    <div>paper</div>
-    <div>scissor</div>
+    <div class="details">
+      <div class="titles">
+        <h1>Rock</h1>
+        <br/>
+        <h1>Paper</h1>
+      <br/>
+    <h1>scissor</h1>
+      </div>
+    </div>
+    <div class="scores">
+    <h2>computer: <span id="computerscore">0</span></h2>
+    <h2>user: <span id="userscore">0</span></h2>
+    </div>
+    <div class="weapons">
+      <button class="weapon" onclick="getgameResult('rock')" >rock</button>
+      <button class="weapon" onclick="getgameResult('paper')">paper</button>
+      <button class="weapon" onclick="getgameResult('scissor')">scissor</button>
+    </div>
+<div class="resultshow">
+  <h2>you selected <span id="useroption"></span></h2>
+  <h2>computer selected <span id="computeroption"></span></h2>
+</div>
   </div>
-  
+  <script src="./index.js"></script>
 </body>
 </html>
