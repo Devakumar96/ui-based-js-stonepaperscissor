@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Pacifico&family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
-*,*::after,*::before{
+,::after,*::before{
   margin:0;
   padding:0;
   box-sizing:border-box:
@@ -8,7 +8,8 @@
 }
 body{
   font-family:'Poppins', sans-serif;
-  background-color:aqua;
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
   color:#000;
   display: flex;
   align-items: center;
@@ -18,7 +19,7 @@ body{
 button{
   outline: none;
 }
-h1 h2{
+h2{
   font-weight: 700;
 }
 h1 span{
@@ -40,12 +41,12 @@ h1 span{
   justify-content: space-around;
 }
 .titles{
-  font-weight: 600;
-  font-size: 2rem;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 0rem;
 }
-
 .scores h2{
-  font-size: 2rem;
+  font-size: 1rem;
 }
 .weapons{
   display: flex;
@@ -53,30 +54,33 @@ h1 span{
   justify-content: space-around;
 }
 .weapons button{
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 3rem;
   border-radius: 50%;
+  background: rgb(63,94,251);
   border: 0;
   font-size: 1.1rem;
   font-weight: 600;
 
 }
 .weapons button:hover{
-  color:rgb(250, 149, 149)
+  color:rgb(250, 149, 149);
+  background: rgb(63,94,251);
 }
 .result{
   height: 0rem;
-  visibility: hidden;
   padding: 1rem 0;
   display: flex;
   flex-direction:column;
   align-items: flex-start;
   justify-content: space-between;
+  visibility: hidden;
 }
-.resultshow{
+.result.show{
   visibility: visible;
   display: flex;
   flex-direction:column;
   align-items: flex-start;
   justify-content: space-between;
+  font-size: 1rem;
 }
