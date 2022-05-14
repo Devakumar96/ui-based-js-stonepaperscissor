@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RPS</title>
-  <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="container">
+   <div class="container">
     <div class="details">
       <div class="titles">
-        <h1>Rock</h1>
+        <h2><span>Rock</span></h2>
         <br/>
-        <h1>Paper</h1>
+        <h2><span>Paper</span></h2>
       <br/>
-    <h1>scissor</h1>
+    <h2><span>Scissor</span></h2>
       </div>
     </div>
     <div class="scores">
@@ -27,11 +27,14 @@
       <button class="weapon" onclick="getgameResult('paper')">paper</button>
       <button class="weapon" onclick="getgameResult('scissor')">scissor</button>
     </div>
-<div class="resultshow">
-  <h2>you selected <span id="useroption"></span></h2>
-  <h2>computer selected <span id="computeroption"></span></h2>
+<div class="result">
+  <h2>you selected <span id="user-option"></span></h2>
+  <h2>computer selected <span id="computer-option"></span></h2>
+  <h2 id="results"></h2>
 </div>
-  </div>
-  <script src="./index.js"></script>
+  </div> 
+
+
+    <script src="./index.js"></script>
 </body>
 </html>

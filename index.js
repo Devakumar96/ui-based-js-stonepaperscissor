@@ -1,19 +1,20 @@
- 'use strict';
+'use strict';
 
-const userScoreEl = document.getElementById('userscore')
-const computerScoreEl = document.getElementById('computerscore')
-const userOptionEl = document.getElementById('userOption')
-const computerOptionEl = document.getElementById('computerOption')
+const weapons = document.querySelectorAll('.weapon');
 
-const resultContainer = document.getElementsByClassName('.result')
+const userScoreEl = document.getElementById('userscore');
+const computerScoreEl = document.getElementById('computerscore');
+const userOptionEl = document.getElementById('user-option');
+const computerOptionEl = document.getElementById('computer-option');
 
-const resultEl = document.getElementById('result');
+const resultContainer = document.querySelector('.result');
+const resultEl = document.getElementById('results');
 
 let userScore = 0;
 let computerScore = 0;
 
-const showresult = function(userWeapon,computerWeapon){
-resultContainer.ClassList.add('show')  
+const showResult = function(userWeapon,computerWeapon){
+resultContainer.classList.add('show');
 userOptionEl.textContent = userWeapon;
 computerOptionEl.textContent = computerWeapon;
 }
@@ -22,47 +23,49 @@ const result = function(result,userWeapon,computerWeapon){
   if (result === 'win'){
     userScore += 1;
     userScoreEl.textContent = userScore;
-    showResult = (userWeapon,computerWeapon)
-    {
-    resultEl.textContent = 'you win'
+    showResult(userWeapon,computerWeapon);
+    resultEl.textContent = 'you win';
   }
-   else (result === 'lost');
+   else (result === 'lost')
   {
     computerScore +=1;
     computerScoreEl.textContent = computerScore;
-    showResult = (userWeapon,computerWeapon){
-    resultEl.textContent = 'you lost'
+    showResult(userWeapon,computerWeapon);
+    resultEl.textContent = 'You lose';
   
 }
+};
 
 // quiryselctor
 // const weapons = document.querySelectorAll('.weapon');
 
 const getcomputerChoice = function(){
   let weapon = ['rock','paper','scissor'];
-  return weapon[Math.trunc(Math.random() * 3)]
+  return weapon[Math.trunc(Math.random() * 3)];
 };
 
 
 const getgameResult = function (userWeapon) {
-  console.log(userWeapon);
+//   console.log(userWeapon);
   let computerWeapon = getcomputerChoice();
   let gameResult = `${computerWeapon}${userWeapon.toLowerCase()}`;
 
   if (computerWeapon === userWeapon) {
     result('draw',userWeapon,computerWeapon);
-  } else if (
+  } 
+  else if (
     gameResult === 'rockpaper' ||
     gameResult === 'paperscissor' ||
     gameResult === 'scissorrock'
   ) {
-    result('won',userWeapon,computerWeapon);
+    result('win',userWeapon,computerWeapon);
 }    
   else if(
     gameResult === 'paperrock' ||
     gameResult === 'scissorpaper' ||
     gameResult === 'rockscissor'
-  ) 
-    result('lost',userWeapon,computerWeapon);
+  ) {
+     result('lost',userWeapon,computerWeapon);
+  }
+   
   };
-
